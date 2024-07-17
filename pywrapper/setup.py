@@ -155,6 +155,7 @@ def customize_compiler_for_nvcc(self):
             postargs = extra_postargs['nvcc']
         else:
             postargs = extra_postargs['gcc']
+            self.set_executable('compiler_so', default_compiler_so)
         # postargs = extra_postargs#['gcc']
 
         super(obj, src, ext, cc_args, postargs, pp_opts)
